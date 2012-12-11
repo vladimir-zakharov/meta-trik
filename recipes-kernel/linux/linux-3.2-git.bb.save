@@ -1,7 +1,0 @@
-inherit kernel
-#require recipes-kernel/linux/linux-
-"RS232U2"
-SRC_URI = "{git PATH };protocol=git;nocheckout=1"
-LINUX_VERSION ?= "3.2"
-LINUX_VERSION_EXTENTION ?= "-trick"
- 
