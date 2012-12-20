@@ -1,6 +1,6 @@
 DESCRIPTION = "Trick Base Image"
 
-IMAGE_FEATURES += ""
+IMAGE_FEATURES = ""
 
 LICENSE = "GPLv2"
 

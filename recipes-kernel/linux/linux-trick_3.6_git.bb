@@ -1,20 +1,24 @@
 inherit kernel
-require recipes-kernel/linux/linux-yocto.inc
-
-DESCRIPTION = "Linux kernel for OMAP L138 processors"
+SECTION = "Kernel"
+DESCRIPTION = "Linux Kernel for DaVinci Trick linux"
+LICENSE = "GPLv2"
 KERNEL_IMAGETYPE = "uImage"
-LICENSE = "GPlv2"
 
-PV = "3.6"
-# v3.2.28 tag
 
-# The main PR is now using MACHINE_KERNEL_PR, for omap3 see conf/machine/include/omap3.inc
-MACHINE_KERNEL_PR_append = "a"
+#require recipes-kernel/linux/multi-kernel.inc
+#require recipes-kernel/linux/tipspkernel.inc
+KERNEL_VERSION ="3.6.7"
+S="${WORKDIR}/git"
 
-SRC_URI = "file:///media/CyberTech/robots_old/robot/linux/linux-3.6"
-SRC_URI_append = " file://defconfig "
+MULTI_CONFIG_BASE_SUFFIX = ""
 
-# Override COMPATIBLE_MACHINE to include your machine in a bbappend
-# file. Leaving it empty here ensures an early explicit build failure.
+BRANCH = "master"
+
 COMPATIBLE_MACHINE = "trickr2e"
 
+SRCREV="af41f73663eeb3c875b78fa9b3be6354ef8267c1"
+SRC_URI = "git://git@tklab.math.spbu.ru/trick_linux_3_6.git;protocol=ssh;branch=${BRANCH} \
+	    file://defconfig"
+LIC_FILES_CHKSUM="file://COPYING;beginline=1;endline=355;md5=bad9197b13faffd10dfc69bd78fd072e"
+
+#do_fetch[no_exec] ="1"
