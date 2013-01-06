@@ -12,7 +12,7 @@ S="${WORKDIR}/git"
 
 MULTI_CONFIG_BASE_SUFFIX = ""
 
-BRANCH = "master"
+BRANCH = "nyrl_lcd_ili9340"
 
 COMPATIBLE_MACHINE = "trickr2e"
 
