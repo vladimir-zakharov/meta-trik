@@ -1,9 +1,19 @@
 DESCRIPTION = "Trick Base Image"
 
-IMAGE_FEATURES = ""
+include recipes-core/images/core-image-minimal.bb
 
-LICENSE = "GPLv2"
+# Include modules in rootfs
+IMAGE_INSTALL += " \
+        kernel-modules \
+        usbutils \
+        i2c-tools \
+        alsa-utils \
+        devmem2 \
+        evtest \
+        "
+IMAGE_DEV_MANAGER   = "udev"
+IMAGE_INIT_MANAGER  = "systemd"
+IMAGE_INITSCRIPTS   = " "
+IMAGE_LOGIN_MANAGER = "tinylogin shadow"
 
-inherit core-image
-
-
+export IMAGE_BASENAME = "trick-base-image"
