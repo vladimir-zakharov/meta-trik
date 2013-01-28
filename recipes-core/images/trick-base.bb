@@ -2,7 +2,7 @@ DESCRIPTION = "Trick Base Image"
 
 include recipes-core/images/core-image-minimal.bb
 
-IMAGE_FEATURES += "qt4e"
+IMAGE_FEATURES += "qt4-embedded ssh-server-dropbear"
 
 LICENSE = "MIT"
 
@@ -10,6 +10,7 @@ inherit core-image
 
 # Include modules in rootfs
 IMAGE_INSTALL += " \
+	packagegroup-core-qt4e \
         kernel-modules \
         usbutils \
         i2c-tools \
@@ -17,5 +18,3 @@ IMAGE_INSTALL += " \
         devmem2 \
         evtest \
         "
-
-export IMAGE_BASENAME = "trick-base-image"
