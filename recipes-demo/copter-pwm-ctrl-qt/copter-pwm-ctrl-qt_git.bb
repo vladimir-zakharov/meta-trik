@@ -9,7 +9,7 @@ S = "${WORKDIR}/git"
 BRANCH = "master"
 SRCREV = "${AUTOREV}"
 
-SRC_URI = "git://git@github.com/nyrl/copter-pwm-ctrl-qt.git;protocol=ssh;branch=${BRANCH}"
+SRC_URI = "git://github.com/iakov/copter-pwm-ctrl-qt.git;branch=${BRANCH}"
 
 do_install() {
 	oe_runmake INSTALL_ROOT=${D}/${prefix} install

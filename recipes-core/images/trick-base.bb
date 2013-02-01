@@ -7,14 +7,17 @@ IMAGE_FEATURES += "qt4-embedded ssh-server-dropbear"
 LICENSE = "MIT"
 
 inherit core-image
+#256MB
+IMAGE_ROOTFS_SIZE = "262144"
 
 # Include modules in rootfs
 IMAGE_INSTALL += " \
-	packagegroup-core-qt4e \
         kernel-modules \
+	qt4-embedded \
+	copter-pwm-ctrl-qt \
         usbutils \
-        i2c-tools \
-        alsa-utils \
+	alsa-utils \
+	evtest \
+	i2c-tools \
         devmem2 \
-        evtest \
         "
