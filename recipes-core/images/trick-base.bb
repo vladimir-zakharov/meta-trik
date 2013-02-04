@@ -13,11 +13,15 @@ IMAGE_ROOTFS_SIZE = "262144"
 # Include modules in rootfs
 IMAGE_INSTALL += " \
         kernel-modules \
+	linux-firmware \
 	qt4-embedded \
 	copter-pwm-ctrl-qt \
         usbutils \
 	alsa-utils \
 	evtest \
 	i2c-tools \
-        devmem2 \
+	avahi \
+	bluez4 \
+	wpa-supplicant \
+	wireless-tools \
         "
