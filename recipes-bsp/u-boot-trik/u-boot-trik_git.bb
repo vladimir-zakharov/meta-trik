@@ -12,7 +12,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 BRANCH = "master"
 SRCREV = "${AUTOREV}"
 
-SRC_URI_trickr2e = "git://git@tklab.math.spbu.ru/trick_u-boot.git;protocol=ssh;branch=${BRANCH}"
+SRC_URI_trikboard = "git://git@tklab.math.spbu.ru/trick_u-boot.git;protocol=ssh;branch=${BRANCH}"
 
 #trikboard_config
 #aisimage
