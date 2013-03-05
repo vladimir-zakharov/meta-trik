@@ -6,7 +6,7 @@ PROVIDES = "virtual/bootloader"
 
 LICENSE = "GPLv2+"
 
-COMPATIBLE_MACHINE = "trickr2e"
+COMPATIBLE_MACHINE = "trikboard"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 BRANCH = "master"

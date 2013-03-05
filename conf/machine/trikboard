@@ -1,20 +1,20 @@
 #@TYPE: Machine
-#@NAME: Trick r2e
-#@DESCRIPTION: Machine configuration for the OMAP L138 trick schematic revision r2e 
+#@NAME: Trikboard
+#@DESCRIPTION: Machine configuration for the OMAP L138 trikboard schematic revision r2e 
 TARGET_ARCH = "arm"
 
 require conf/machine/include/davinci.inc
 require conf/machine/include/omapl138.inc
 
-PREFERRED_PROVIDER_virtual/kernel = "linux-trick"
-PREFERRED_PROVIDER_virtual/bootloader = "u-boot-trick"
+PREFERRED_PROVIDER_virtual/kernel = "linux-trik"
+PREFERRED_PROVIDER_virtual/bootloader = "u-boot-trik"
 
 
 #UBOOT_MACHINE = "trik_bootloader_config"
 UBOOT_ENTRYPOINT = "0xc0008000"
 UBOOT_LOADADDRESS = "0xc0008000"
 
-EXTRA_IMAGEDEPENDS = "u-boot-trick"
+EXTRA_IMAGEDEPENDS = "u-boot-trik"
 
 MACHINE_FEATURES = "kernel26 serial acpi usbhost usbgadget vfat mmc alsa ext2 ide screen wifi bluetooth"
 

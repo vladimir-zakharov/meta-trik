@@ -3,7 +3,7 @@ HOMEPAGE = "http://github.com/MSP-LaneWestlund/MSPBSL_Library"
 SECTION = "libs"
 LICENSE = "LGPLv2.1+"
 DEPENDS = "boost hidapi"
-COMPATIBLE_MACHINE = "trickr2e"
+COMPATIBLE_MACHINE = "trikboard"
 S="${WORKDIR}/git"
 SRCREV="${AUTOREV}"
 
@@ -13,7 +13,7 @@ LIC_FILES_CHKSUM="file://LICENSE.txt;beginline=1;endline=355;md5=fd140d36d9ffcb0
 
 
 inherit cmake
+
 EXTRA_OECMAKE ="-DLIB_INSTALL_DIR=${libdir} -DLIBEXEC_INSTALL_DIR=${libexecdir}"
 
-FILES_${PN} = "${libdir}/libmslbsp.a"
 
