@@ -9,10 +9,12 @@ S = "${WORKDIR}/git"
 BRANCH = "master"
 SRCREV = "${AUTOREV}"
 
-SRC_URI = "git://github.com/EvilTosha/copter-pwm-ctrl-qt.git;branch=${BRANCH}"
+SRC_URI = "git://github.com/EvilTosha/car-demo.git;branch=${BRANCH}"
 
 do_install() {
-	oe_runmake INSTALL_ROOT=${D}/${prefix} install
+        oe_runmake INSTALL_ROOT=${D}/${prefix} install
 }
 
 inherit qt4e
+
+

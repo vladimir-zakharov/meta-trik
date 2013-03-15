@@ -1,3 +1,5 @@
+PR = "r3"
+
 DESCRIPTION = "Trick Base Image"
 
 IMAGE_INSTALL = "packagegroup-core-boot \
@@ -5,6 +7,10 @@ IMAGE_INSTALL = "packagegroup-core-boot \
 	packagegroup-core-qt4e \
 	${ROOTFS_PKGMANAGE_BOOTSTRAP} \
 	${CORE_IMAGE_EXTRA_INSTALL} \
+	gstreamer \
+	gst-plugins-base \
+	gst-plugins-good \
+	gst-plugins-bad \
         kernel-modules \
 	packagegroup-ti-drivers \
         usbutils \
