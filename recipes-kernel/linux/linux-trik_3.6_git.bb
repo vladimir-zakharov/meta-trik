@@ -1,3 +1,5 @@
+PR = "r1"
+
 inherit kernel
 
 SECTION = "Kernel"
@@ -18,7 +20,7 @@ COMPATIBLE_MACHINE = "trikboard"
 
 SRCREV="${AUTOREV}"
 
-SRC_URI = "git://git@tklab.math.spbu.ru/trick_linux_3_6.git;protocol=ssh;branch=acceler_ctr \
+SRC_URI = "git://git@tklab.math.spbu.ru/trick_linux_3_6.git;protocol=ssh;branch=master \
 	   file://defconfig"
 
 LIC_FILES_CHKSUM="file://COPYING;beginline=1;endline=355;md5=bad9197b13faffd10dfc69bd78fd072e"

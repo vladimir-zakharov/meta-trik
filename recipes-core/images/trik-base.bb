@@ -1,4 +1,4 @@
-PR = "r3"
+PR = "r4"
 
 DESCRIPTION = "Trick Base Image"
 
@@ -14,14 +14,18 @@ IMAGE_INSTALL = "packagegroup-core-boot \
         kernel-modules \
 	packagegroup-ti-drivers \
         usbutils \
-        alsa-utils \
-        evtest \
-        i2c-tools \
-        avahi \
-        bluez4 \
+	avahi \
         wpa-supplicant \
         wireless-tools \
-	"
+        "
+
+#       alsa-utils \
+#        evtest \
+#        i2c-tools \
+#        bluez4 \
+#        wpa-supplicant \
+#        wireless-tools \
+#	"
 #	ti-dsplink \
 #	"
 #        copter-pwm-ctrl-qt \
