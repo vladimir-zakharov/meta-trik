@@ -3,7 +3,7 @@ PR = "r1"
 inherit kernel
 
 SECTION = "Kernel"
-DESCRIPTION = "Linux Kernel for DaVinci Trick linux"
+DESCRIPTION = "Linux Kernel for DaVinci Trik linux"
 LICENSE = "GPLv2"
 KERNEL_IMAGETYPE = "uImage"
 

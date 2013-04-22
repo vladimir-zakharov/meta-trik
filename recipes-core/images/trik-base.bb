@@ -1,6 +1,6 @@
 PR = "r4"
 
-DESCRIPTION = "Trick Base Image"
+DESCRIPTION = "Trik Base Image"
 
 IMAGE_INSTALL = "packagegroup-core-boot \
 	packagegroup-core-ssh-openssh \
