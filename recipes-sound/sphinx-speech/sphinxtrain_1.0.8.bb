@@ -1,8 +1,8 @@
 DESCRIPTION = "CMU Sphinx speech recognition acoustic model training tool"
 HOMEPAGE = "http://www.speech.cs.cmu.edu/pocketsphinx/"
 LICENSE = "BSD"
-DEPENDS = "sphinxbase python"
-RDEPENDS_${PN} += "sphinxbase-tools"
+DEPENDS = "sphinxbase"
+RDEPENDS_${PN} += "sphinxbase-tools python"
 PR="r0"
 
 BBCLASSEXTEND += "native nativesdk"
