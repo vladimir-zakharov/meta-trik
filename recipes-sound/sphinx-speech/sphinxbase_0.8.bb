@@ -25,4 +25,4 @@ require sphinx-fpu.inc
 EXTRA_OECONF += "${@get_sphinx_fpu_setting(bb, d)}"
 
 PACKAGES =+ "${PN}-tools"
-FILES_${PN}-tools = "${bindir} ${datadir}"
+FILES_${PN}-tools = "${bindir}/* ${datadir}"
