@@ -2,6 +2,7 @@ DESCRIPTION = "CMU Sphinx speech recognition acoustic model training tool"
 HOMEPAGE = "http://www.speech.cs.cmu.edu/pocketsphinx/"
 LICENSE = "BSD"
 DEPENDS = "sphinxbase python"
+RDEPENDS_${PN} += "sphinxbase-tools"
 PR="r0"
 
 BBCLASSEXTEND += "native nativesdk"
@@ -18,4 +19,4 @@ inherit autotools perlnative
 require sphinx-python.inc
 EXTRA_OECONF += "${@get_sphinx_python_setting(bb, d)}"
 
-FILES_${PN}-dbg += "${libdir}/sphinxtrain/sphinxtrain/.debug/*"
+FILES_${PN}-dbg += "${libdir}/sphinxtrain/sphinxtrain/.debug/"

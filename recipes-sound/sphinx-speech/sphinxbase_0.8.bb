@@ -23,3 +23,6 @@ require sphinx-python.inc
 EXTRA_OECONF += "${@get_sphinx_python_setting(bb, d)}"
 require sphinx-fpu.inc
 EXTRA_OECONF += "${@get_sphinx_fpu_setting(bb, d)}"
+
+PACKAGES =+ "${PN}-tools"
+FILES_${PN}-tools = "${bindir} ${datadir}"

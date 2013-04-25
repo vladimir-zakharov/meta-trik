@@ -15,3 +15,7 @@ inherit autotools
 
 require sphinx-python.inc
 EXTRA_OECONF += "${@get_sphinx_python_setting(bb, d)}"
+
+PACKAGES =+ "${PN}-tools"
+FILES_${PN}-tools = "${bindir} ${datadir}"
+RDEPENDS_${PN}-tools += "sphinxbase-tools"
