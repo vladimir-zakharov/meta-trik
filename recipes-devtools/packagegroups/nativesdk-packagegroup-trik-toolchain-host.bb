@@ -1,10 +1,11 @@
 SUMMARY = "Provides extra host tools for TRIK toolchain"
 LICENSE = "MIT"
 
-PR = "r0"
+PR = "r1"
 
 inherit packagegroup
 
 RDEPENDS_${PN} += "\
     nativesdk-make \
+    nativesdk-sphinxtrain \
     "
