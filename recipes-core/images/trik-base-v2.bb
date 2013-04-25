@@ -8,6 +8,9 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-wifi \
 		packagegroup-qte-trik \
 		packagegroup-core-ssh-openssh \
+		ti-dsplink \
+		pocketsphinx \
+		packagegroup-ti-drivers \
   "
 
 IMAGE_LINGUAS = " "
