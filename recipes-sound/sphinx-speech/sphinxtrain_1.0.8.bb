@@ -18,4 +18,4 @@ inherit autotools perlnative
 require sphinx-python.inc
 EXTRA_OECONF += "${@get_sphinx_python_setting(bb, d)}"
 
-FILES_${PN}-dbg += "${libdir}/${PN}/sphinxtrain/.debug/*"
+FILES_${PN}-dbg += "${libdir}/sphinxtrain/sphinxtrain/.debug/*"
