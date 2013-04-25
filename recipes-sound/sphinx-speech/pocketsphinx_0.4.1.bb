@@ -3,6 +3,8 @@ HOMEPAGE = "http://www.speech.cs.cmu.edu/pocketsphinx/"
 LICENSE = "BSD"
 DEPENDS = "sphinxbase"
 
+LIC_FILES_CHKSUM = "file://COPYING;md5=7ce5ec61a183243b14bb0a1f7857f305"
+
 SRC_URI = "${SOURCEFORGE_MIRROR}/cmusphinx/${PN}-${PV}.tar.bz2 \
            file://cross-compile.patch"
 

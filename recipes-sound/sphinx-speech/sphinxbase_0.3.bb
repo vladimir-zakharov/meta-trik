@@ -4,6 +4,8 @@ LICENSE = "BSD"
 
 SRC_URI = "${SOURCEFORGE_MIRROR}/cmusphinx/sphinxbase-${PV}.tar.bz2"
 
+LIC_FILES_CHKSUM = "file://COPYING;md5=ff83766eb1aadb7f5d1fc15db4ef98c3"
+
 inherit autotools
 
 require sphinx-fpu.inc
