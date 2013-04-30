@@ -4,7 +4,9 @@ LICENSE = "GPLv2"
 SECTION = "multimedia"
 PR = "r0"
 
-DEPENDS = "lua5.1 lua5.1-native dbus zlib libmad libav libgcrypt"
+DEPENDS = "lua5.1 lua5.1-native dbus zlib libmad libav libgcrypt x264"
+# v4l-utils is not required for vlc, but might be handy if present
+RSUGGESTS_${PN} = "v4l-utils"
 
 SRC_URI = "http://download.videolan.org/pub/videolan/vlc/${PV}/vlc-${PV}.tar.xz"
 SRC_URI[md5sum] = "b45be633c71dca04ca7d6c3d64dd728b"
@@ -19,8 +21,10 @@ inherit autotools gettext
 EXTRA_OECONF += "--disable-libxml2"
 # Qt4 plugin breaks debugedit
 EXTRA_OECONF += "--disable-qt4"
-
+# X11 stuff is not applicable to Trik
 EXTRA_OECONF += "--disable-glx --disable-xcb"
+# Allow run as root
+EXTRA_OECONF += "--enable-run-as-root"
 
 FILES_${PN}-dbg += "${libdir}/vlc/plugins/*/.debug/"
 
