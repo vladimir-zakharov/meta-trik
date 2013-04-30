@@ -11,6 +11,7 @@ IMAGE_INSTALL = "packagegroup-core-boot \
 	gst-plugins-base \
 	gst-plugins-good \
 	gst-plugins-bad \
+	vlc \
         kernel-modules \
 	packagegroup-ti-drivers \
         usbutils \
