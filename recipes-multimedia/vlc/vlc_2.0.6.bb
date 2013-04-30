@@ -28,17 +28,3 @@ EXTRA_OECONF += "--enable-run-as-root"
 
 FILES_${PN}-dbg += "${libdir}/vlc/plugins/*/.debug/"
 
-
-
-
-
-
-
-
-
-#TODO STUFF:
-#ARM_INSTRUCTION_SET = "arm"
-#DEPENDS = "libfribidi libtool libgcrypt gst-plugins-bad virtual/libsdl qt4-x11-free dbus libxml2 gnutls tremor faad2 ffmpeg flac libxpm fluidsynth alsa-lib \
-#           ${@base_conditional('ENTERPRISE_DISTRO', '1', '', 'libmad libid3tag liba52 mpeg2dec', d)}"
-#EXTRA_OECONF = 
-
