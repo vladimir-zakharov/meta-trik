@@ -1,4 +1,4 @@
-PR="r2"
+PR="r4"
 DESCRIPTION = "Trik-base v2"
 
 IMAGE_INSTALL = "packagegroup-base \
@@ -8,9 +8,13 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-wifi \
 		packagegroup-qte-trik \
 		packagegroup-core-ssh-openssh \
-		ti-dsplink \
+		packagegroup-firmware \
+		packagegroup-utils \
 		pocketsphinx \
-		packagegroup-ti-drivers \
+		alsa-utils \
+		opkg \
+		udev-extraconf \
+		ubootchart \
   "
 
 IMAGE_LINGUAS = " "
@@ -19,7 +23,7 @@ LICENSE = "MIT"
 
 inherit core-image
 
-IMAGE_ROOTFS_SIZE = "8192"
+IMAGE_ROOTFS_SIZE = "131072"
 
 # remove not needed ipkg informations
 ROOTFS_POSTPROCESS_COMMAND += "remove_packaging_data_files ; "
