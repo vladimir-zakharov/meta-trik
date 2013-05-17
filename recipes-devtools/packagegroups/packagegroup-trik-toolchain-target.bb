@@ -8,4 +8,5 @@ inherit packagegroup
 RDEPENDS_${PN} += "\
     sphinxbase-dev \
     pocketsphinx-dev \
+    libnl-dev \
     "

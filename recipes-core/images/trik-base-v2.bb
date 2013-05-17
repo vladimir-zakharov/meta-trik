@@ -14,7 +14,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		alsa-utils \
 		opkg \
 		udev-extraconf \
-		ubootchart \
   "
 
 IMAGE_LINGUAS = " "
