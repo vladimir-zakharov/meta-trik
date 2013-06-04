@@ -4,7 +4,8 @@ LICENSE = "GPLv2"
 SECTION = "multimedia"
 PR = "r0"
 
-DEPENDS = "lua5.1 lua5.1-native dbus zlib libmad libav libgcrypt x264"
+DEPENDS  = "lua5.1 lua5.1-native dbus zlib libmad libav libgcrypt x264 ffmpeg alsa-lib"
+
 # v4l-utils is not required for vlc, but might be handy if present
 RSUGGESTS_${PN} = "v4l-utils"
 
@@ -27,4 +28,19 @@ EXTRA_OECONF += "--disable-glx --disable-xcb"
 EXTRA_OECONF += "--enable-run-as-root"
 
 FILES_${PN}-dbg += "${libdir}/vlc/plugins/*/.debug/"
+
+# Do not use thumb as it is (probably) slower
+ARM_INSTRUCTION_SET = "arm"
+
+
+
+
+
+
+
+
+#TODO STUFF:
+#DEPENDS = "libfribidi libtool gst-plugins-bad virtual/libsdl dbus gnutls tremor faad2 flac libxpm fluidsynth \
+#           ${@base_conditional('ENTERPRISE_DISTRO', '1', '', 'libid3tag liba52 mpeg2dec', d)}"
+#EXTRA_OECONF = 
 
