@@ -1,0 +1,19 @@
+ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface_group=0
+update_config=1
+
+network={
+        ssid="trik"
+        key_mgmt=NONE
+        priority=6
+}
+# reading passphrase from stdin
+network={
+        ssid="DeathStar"
+        scan_ssid=1
+        #psk="killallhumans"
+        psk=e63814226f37303da0dff094e1dd770ace267ca69ffc4ea4aa868a737847232f
+        priority=7
+}
+
+
