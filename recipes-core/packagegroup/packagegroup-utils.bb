@@ -11,12 +11,14 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS ?= ""
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS ?= ""
 
 RDEPENDS_${PN} = "\
-	evtest \
-	i2c-tools \
-	usbutils \
-	e2fsprogs \
-  ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS}"
+  evtest \
+  i2c-tools \
+  usbutils \
+  e2fsprogs \
+  ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
+ "
 
 RRECOMMENDS_${PN} = "\
-    ${MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS}"
+  ${MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS} \
+ "
 
