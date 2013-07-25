@@ -1,7 +1,7 @@
 SUMMARY = "Firmware package"
-DESCRIPTION = "Firmware for usb-wifi,wl12xx,bluetooth"
+DESCRIPTION = "Firmware for usb-wifi(ath9k),wl12xx,bluetooth"
 LICENSE = "LGPL"
-PR = "r0"
+PR = "r1"
 
 inherit packagegroup
 
@@ -12,6 +12,7 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS ?= ""
 
 RDEPENDS_${PN} = "\
   linux-firmware-wl12xx \
+  linux-firmware-ath9k \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
