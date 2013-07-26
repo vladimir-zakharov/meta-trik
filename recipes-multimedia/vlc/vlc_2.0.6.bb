@@ -2,9 +2,9 @@ DESCRIPTION = "Video player and streamer, Trik-dedicated build"
 HOMEPAGE = "http://www.videolan.org"
 LICENSE = "GPLv2"
 SECTION = "multimedia"
-PR = "r0"
+PR = "r1"
 
-DEPENDS  = "lua5.1 lua5.1-native dbus zlib libmad libav libgcrypt x264 ffmpeg alsa-lib"
+DEPENDS  = "lua5.1 lua5.1-native dbus zlib libmad liba52 libav libgcrypt x264 ffmpeg alsa-lib"
 
 # v4l-utils is not required for vlc, but might be handy if present
 RSUGGESTS_${PN} = "v4l-utils"

@@ -1,4 +1,4 @@
-PR="r4"
+PR="r5"
 DESCRIPTION = "Trik-base v2"
 
 IMAGE_INSTALL = "packagegroup-base \
@@ -10,8 +10,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-core-ssh-openssh \
 		packagegroup-firmware \
 		packagegroup-utils \
-		pocketsphinx \
-		alsa-utils \
+		packagegroup-multimedia \
 		opkg \
 		udev-extraconf \
   "
