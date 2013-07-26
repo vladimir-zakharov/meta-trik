@@ -1,5 +1,5 @@
 SUMMARY = "Firmware package"
-DESCRIPTION = "Firmware for usb-wifi(ath9k),wl12xx,bluetooth"
+DESCRIPTION = "Firmware for usb-wifi(ath9k,rt73),wl12xx,bluetooth"
 LICENSE = "LGPL"
 PR = "r1"
 
@@ -13,6 +13,7 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS ?= ""
 RDEPENDS_${PN} = "\
   linux-firmware-wl12xx \
   linux-firmware-ath9k \
+  linux-firmware-ralink \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
