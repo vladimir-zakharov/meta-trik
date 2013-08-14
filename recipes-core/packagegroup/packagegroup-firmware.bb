@@ -11,7 +11,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS ?= ""
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS ?= ""
 
 RDEPENDS_${PN} = "\
-  linux-firmware-wl12xx \
+  linux-firmware-trik-wl1271 \
   linux-firmware-ath9k \
   linux-firmware-ralink \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
