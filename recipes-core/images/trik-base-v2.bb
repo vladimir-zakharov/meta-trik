@@ -13,6 +13,8 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-multimedia \
 		opkg \
 		udev-extraconf \
+		mspbsl \
+		mono \
   "
 
 IMAGE_LINGUAS = " "
