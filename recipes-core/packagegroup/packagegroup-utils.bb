@@ -11,10 +11,13 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS ?= ""
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS ?= ""
 
 RDEPENDS_${PN} = "\
+  iptables \
   evtest \
   i2c-tools \
   usbutils \
   e2fsprogs \
+  mc \
+  lrzsz \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
