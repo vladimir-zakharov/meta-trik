@@ -9,7 +9,7 @@ SRCREV="${AUTOREV}"
 
 SRC_URI ="git://github.com/signal11/hidapi.git"
 
-LIC_FILES_CHKSUM="file://LICENSE.txt;beginline=1;endline=355;md5=e40b7ec577cd3a23e554b7751d7f025b"
+LIC_FILES_CHKSUM="file://LICENSE.txt;beginline=1;endline=355;md5=7c3949a631240cb6c31c50f3eb696077"
 
 inherit autotools
 
