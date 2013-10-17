@@ -10,6 +10,8 @@ RDEPENDS_${PN} = " \
         libqt-embeddedgui4 \
 	libqt-embeddeddbus4 \
         libqt-embeddednetwork4 \
+        libqt-embeddedscript4 \
+        libqt-embeddedscripttools4 \
 	qt4-embedded-fonts-ttf-dejavu \
         qt4-embedded-plugin-imageformat-jpeg \
         qt4-embedded-plugin-imageformat-tiff \
