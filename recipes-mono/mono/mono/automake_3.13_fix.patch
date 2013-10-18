@@ -1,0 +1,42 @@
+diff -ruN mono-2.11.origin/configure.in mono-2.11/configure.in
+--- mono-2.11.origin/configure.in	2013-10-17 20:37:31.415980674 +0400
++++ mono-2.11/configure.in	2013-10-17 20:38:10.763981649 +0400
+@@ -14,7 +14,7 @@
+ m4_ifdef([_A][M_PROG_TAR],[_A][M_SET_OPTION([tar-ustar])])
+ 
+ AM_INIT_AUTOMAKE([1.9 dist-bzip2 tar-ustar no-dist-gzip foreign])
+-AM_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADERS([config.h])
+ AM_MAINTAINER_MODE
+ 
+ API_VER=2.0
+@@ -356,7 +356,6 @@
+ AC_CHECK_TOOL(CXX, g++, g++)
+ AC_PROG_CXX
+ AM_PROG_AS
+-AM_PROG_CC_STDC
+ AC_PROG_INSTALL
+ AC_PROG_AWK
+ dnl We should use AM_PROG_AS, but it's not available on automake/aclocal 1.4
+diff -ruN mono-2.11.origin/eglib/autogen.sh mono-2.11/eglib/autogen.sh
+--- mono-2.11.origin/eglib/autogen.sh	2013-10-17 20:37:31.407980674 +0400
++++ mono-2.11/eglib/autogen.sh	2013-10-17 20:38:45.187982502 +0400
+@@ -113,7 +113,7 @@
+   exit 1
+ }
+ 
+-if grep "^AM_CONFIG_HEADER" configure.ac >/dev/null; then
++if grep "^AC_CONFIG_HEADERS" configure.ac >/dev/null; then
+   echo "Running autoheader..."
+   autoheader || { echo "**Error**: autoheader failed."; exit 1; }
+ fi
+diff -ruN mono-2.11.origin/runtime/Makefile.am mono-2.11/runtime/Makefile.am
+--- mono-2.11.origin/runtime/Makefile.am	2013-10-17 20:37:30.571980653 +0400
++++ mono-2.11/runtime/Makefile.am	2013-10-17 20:38:26.783982046 +0400
+@@ -1,6 +1,3 @@
+-# hack to prevent 'check' from depending on 'all'
+-AUTOMAKE_OPTIONS = cygnus
+-
+ tmpinst = _tmpinst
+ 
+ noinst_SCRIPTS = mono-wrapper monodis-wrapper
