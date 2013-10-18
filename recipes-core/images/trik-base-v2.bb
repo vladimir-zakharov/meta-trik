@@ -15,6 +15,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		udev-extraconf \
 		mspbsl \
 		mono \
+	trik-runtime \
   "
 
 IMAGE_LINGUAS = " "
