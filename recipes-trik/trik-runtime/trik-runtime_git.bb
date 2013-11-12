@@ -8,7 +8,7 @@ PR = "r4"
 PROVIDES="trik-runtime"
 
 S = "${WORKDIR}/git"
-BRANCH = "mrv_buildsystem"
+BRANCH = "master"
 SRCREV = "${AUTOREV}"
 
 SRC_URI = "git://github.com/trikset/trikRuntime.git;branch=${BRANCH}"
@@ -16,7 +16,8 @@ SRC_URI = "git://github.com/trikset/trikRuntime.git;branch=${BRANCH}"
 do_install() {
 	oe_runmake INSTALL_ROOT=${D}/home/root/trik/ install
 	install -m 0755 ${S}/trikRun/test.qts ${D}/home/root/trik/
-	install -m 0755 ${S}/media/beep.mp3 ${D}/home/root/trik/
+        install -d -m 0755 ${D}/home/root/trik/media/
+	install -m 0755 ${S}/media/* ${D}/home/root/trik/media/
 	install -m 0755 ${S}/trikControl/config.xml ${D}/home/root/trik/
 }
 FILES_${PN} = "/home/root/trik/"
