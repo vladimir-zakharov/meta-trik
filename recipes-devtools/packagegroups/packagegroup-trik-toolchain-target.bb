@@ -13,4 +13,5 @@ RDEPENDS_${PN} += "\
     pocketsphinx-dev \
     libnl-dev \
     libv4l-dev \
+    boost-dev \
     "
