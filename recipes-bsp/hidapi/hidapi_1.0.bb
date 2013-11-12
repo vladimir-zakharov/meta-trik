@@ -3,7 +3,7 @@ HOMEPAGE = "http://www.signal11.us/oss/hidapi/"
 
 SECTION = "libs"
 LICENSE = "LGPLv2.1+"
-
+DEPENDS += "udev"
 S="${WORKDIR}/git"
 SRCREV="${AUTOREV}"
 
