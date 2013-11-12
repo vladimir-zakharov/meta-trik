@@ -18,6 +18,7 @@ RDEPENDS_${PN} = "\
   e2fsprogs \
   mc \
   lrzsz \
+  ntp \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
