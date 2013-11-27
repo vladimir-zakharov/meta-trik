@@ -15,6 +15,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		udev-extraconf \
 		mspbsl \
 		mono \
+		rc-local \
 	trik-runtime \
   "
 
