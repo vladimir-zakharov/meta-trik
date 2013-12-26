@@ -16,6 +16,8 @@ IMAGE_INSTALL = "packagegroup-base \
 		mspbsl \
 		mono \
 		rc-local \
+		python \
+		python-pip \
 	trik-runtime \
   "
 
