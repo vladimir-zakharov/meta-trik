@@ -4,20 +4,21 @@ LICENSE = "GPLv2"
 SECTION = "multimedia"
 PR = "r1"
 
-DEPENDS  = "lua5.1 lua5.1-native dbus zlib libmad liba52 libav libgcrypt x264 ffmpeg alsa-lib"
+DEPENDS  = "lua5.1 lua5.1-native dbus zlib libmad liba52 libav libgcrypt x264 ffmpeg alsa-lib libdvbpsi"
 
 # v4l-utils is not required for vlc, but might be handy if present
 RSUGGESTS_${PN} = "v4l-utils"
 
 SRC_URI = "http://download.videolan.org/pub/videolan/vlc/${PV}/vlc-${PV}.tar.xz"
-SRC_URI[md5sum] = "b45be633c71dca04ca7d6c3d64dd728b"
-SRC_URI[sha256sum] = "31cc98035e2ce36c71a8f105aa5a87e3d8b5e206a0b3f7208c5ced407cbe1963"
+SRC_URI[md5sum] = "c96408fc0a6e6e7f85b37ab4d7d7c98f"
+SRC_URI[sha256sum] = "c4bea9be211360ddbf29b93661fb1f33f7d5ce44166d829cbebfa01f303bfb30"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 
 inherit autotools gettext
 
+EXTRA_OECONF += "--enable-dvbpsi"
 # libxml2 is built with --disable-catalog in recipe and cannot be used
 EXTRA_OECONF += "--disable-libxml2"
 # Qt4 plugin breaks debugedit
