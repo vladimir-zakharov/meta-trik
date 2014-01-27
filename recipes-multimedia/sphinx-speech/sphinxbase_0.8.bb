@@ -12,7 +12,8 @@ BBCLASSEXTEND += "native nativesdk"
 SRC_URI = "${SOURCEFORGE_MIRROR}/cmusphinx/sphinxbase-${PV}.tar.gz"
 SRC_URI[md5sum] = "7335d233f7ad4ecc4b508aec7b5dc101"
 SRC_URI[sha256sum] = "55708944872bab1015b8ae07b379bf463764f469163a8fd114cbb16c5e486ca8"
-SRC_URI += "file://automake_3.13_fix.patch"
+SRC_URI += "file://automake_3.13_fix.patch \
+	    file://enable_only_support_alsa_backend.patch"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=c550e8ca1106e5eeaf4e2b4cbf960fcf"
 
