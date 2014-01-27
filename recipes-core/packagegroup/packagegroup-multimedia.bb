@@ -9,6 +9,8 @@ RDEPENDS_${PN} = "\
   vlc \
   alsa-utils \
   pocketsphinx \
+  pocketsphinx-tools \
+  sphinxtrain \
   espeak \
   flite-alsa \
   v4l-utils \
