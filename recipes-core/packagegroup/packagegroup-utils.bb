@@ -19,6 +19,9 @@ RDEPENDS_${PN} = "\
   mc \
   lrzsz \
   ntp \
+  strace \
+  ltrace \
+  atop \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
