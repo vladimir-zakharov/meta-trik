@@ -19,6 +19,8 @@ do_install() {
         install -d -m 0755 ${D}/home/root/trik/media/
 	install -m 0755 ${S}/media/* ${D}/home/root/trik/media/
 	install -m 0755 ${S}/trikControl/config.xml ${D}/home/root/trik/
+	install -m 0755 ${S}/trikGui/wpa-config.xml ${D}/home/root/trik/
+	
 }
 FILES_${PN} = "/home/root/trik/"
 FILES_${PN}-dev += "/home/root/trik/*.so"
