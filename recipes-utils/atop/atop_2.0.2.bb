@@ -5,7 +5,7 @@ for every process (and thread) it shows a.o. the CPU utilization, \
 memory growth, disk utilization, priority, username, state, and exit code."
 HOMEPAGE = "http://www.atoptool.nl"
 LICENSE = "GPLv2"
-
+DEPENDS = "ncurses"
 LIC_FILES_CHKSUM = "file://COPYING;md5=393a5ca445f6965873eca0259a17f833"
 
 SRC_URI = "http://www.atoptool.nl/download/${PN}-${PV}.tar.gz"
