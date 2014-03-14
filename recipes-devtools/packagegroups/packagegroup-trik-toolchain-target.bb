@@ -14,4 +14,6 @@ RDEPENDS_${PN} += "\
     libnl-dev \
     libv4l-dev \
     boost-dev \
+    hidapi-dev \
+    libusb1-dev \
     "
