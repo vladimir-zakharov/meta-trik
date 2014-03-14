@@ -15,8 +15,10 @@ RDEPENDS_${PN} = "\
   avahi \
   wpa-supplicant \
   wireless-tools \
+  hostap-daemon \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
+#  ifplugd 
 
 RRECOMMENDS_${PN} = "\
   ${MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS} \
