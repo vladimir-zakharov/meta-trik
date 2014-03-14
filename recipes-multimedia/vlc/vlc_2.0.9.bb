@@ -13,6 +13,8 @@ SRC_URI = "http://download.videolan.org/pub/videolan/vlc/${PV}/vlc-${PV}.tar.xz"
 SRC_URI[md5sum] = "c96408fc0a6e6e7f85b37ab4d7d7c98f"
 SRC_URI[sha256sum] = "c4bea9be211360ddbf29b93661fb1f33f7d5ce44166d829cbebfa01f303bfb30"
 
+SRC_URI += "file://0001-freetype.patch"
+
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 
@@ -32,13 +34,6 @@ FILES_${PN}-dbg += "${libdir}/vlc/plugins/*/.debug/"
 
 # Do not use thumb as it is (probably) slower
 ARM_INSTRUCTION_SET = "arm"
-
-
-
-
-
-
-
 
 #TODO STUFF:
 #DEPENDS = "libfribidi libtool gst-plugins-bad virtual/libsdl dbus gnutls tremor faad2 flac libxpm fluidsynth \
