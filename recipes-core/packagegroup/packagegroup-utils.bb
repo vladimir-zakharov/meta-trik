@@ -22,6 +22,7 @@ RDEPENDS_${PN} = "\
   strace \
   ltrace \
   atop \
+  cronie \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
