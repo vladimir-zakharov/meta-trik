@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://LICENCE.ti-connectivity;md5=186e7a43cf6c274283ad81272
 
 SRCREV = "${AUTOREV}"
 
-SRC_URI = "git://git@tklab.math.spbu.ru/linux-firmware-trik.git;protocol=ssh;branch=master"
+SRC_URI = "git://github.com/trikset/trik-firmware.git"
 
 S = "${WORKDIR}/git"
 

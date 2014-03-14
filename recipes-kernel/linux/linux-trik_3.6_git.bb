@@ -15,8 +15,7 @@ KERNEL_VERSION ="3.6.7"
 MULTI_CONFIG_BASE_SUFFIX = ""
 
 SRCREV = "${AUTOREV}"
-
-SRC_URI = "git://git@tklab.math.spbu.ru/trick_linux_3_6.git;protocol=ssh;branch=master \
+SRC_URI = "git://github.com/trikset/trik-linux.git;branch=trik-linux-3.6.7 \
 	   file://defconfig"
 S = "${WORKDIR}/git"
 

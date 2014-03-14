@@ -10,7 +10,7 @@ BRANCH="master"
 SRCREV="${AUTOREV}"
 
 
-SRC_URI ="git://git@tklab.math.spbu.ru/mspbsl_library.git;branch=${BRANCH};protocol=ssh"
+SRC_URI ="git://github.com/trikset/trik-mspbsl-library.git;branch=${BRANCH}"
 
 LIC_FILES_CHKSUM="file://LICENSE.txt;beginline=1;endline=355;md5=fd140d36d9ffcb0548c8c21659083810"
 

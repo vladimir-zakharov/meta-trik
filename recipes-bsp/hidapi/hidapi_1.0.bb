@@ -13,3 +13,5 @@ LIC_FILES_CHKSUM="file://LICENSE.txt;beginline=1;endline=355;md5=7c3949a631240cb
 
 inherit autotools
 
+FILES_${PN}-dev += "${base_libdir}/*.so ${base_libdir}/*.la"
+

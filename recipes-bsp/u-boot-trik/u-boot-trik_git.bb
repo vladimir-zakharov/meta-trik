@@ -9,10 +9,9 @@ LICENSE = "GPLv2+"
 COMPATIBLE_MACHINE = "trikboard"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-BRANCH = "master"
+BRANCH = "trik-u-boot-2013.01.y"
 SRCREV = "${AUTOREV}"
-
-SRC_URI_trikboard = "git://git@tklab.math.spbu.ru/trick_u-boot.git;protocol=ssh;branch=${BRANCH}"
+SRC_URI_trikboard = "git://github.com/trikset/trik-u-boot.git;branch=${BRANCH}"
 
 #trikboard_config
 #aisimage
