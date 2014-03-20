@@ -16,9 +16,9 @@ RDEPENDS_${PN} = "\
   wpa-supplicant \
   wireless-tools \
   hostap-daemon \
+  ifplugd \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
-#  ifplugd 
 
 RRECOMMENDS_${PN} = "\
   ${MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS} \
