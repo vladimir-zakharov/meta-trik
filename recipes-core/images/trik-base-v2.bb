@@ -18,9 +18,9 @@ IMAGE_INSTALL = "packagegroup-base \
 		rc-local \
 		python \
 		python-pip \
-	trik-runtime \
-  "
-
+		trik-runtime \
+		roslaunch \
+		"
 IMAGE_LINGUAS = " "
 
 LICENSE = "MIT"
