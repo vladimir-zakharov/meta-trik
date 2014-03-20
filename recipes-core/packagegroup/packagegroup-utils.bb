@@ -23,6 +23,7 @@ RDEPENDS_${PN} = "\
   ltrace \
   atop \
   cronie \
+  tzdata \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
