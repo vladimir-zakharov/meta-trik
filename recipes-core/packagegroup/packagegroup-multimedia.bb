@@ -14,6 +14,9 @@ RDEPENDS_${PN} = "\
   espeak \
   flite-alsa \
   v4l-utils \
+  gst-meta-base \
+  gst-meta-audio \
+  gst-meta-video \
  "
 
 RRECOMMENDS_${PN} = "\
