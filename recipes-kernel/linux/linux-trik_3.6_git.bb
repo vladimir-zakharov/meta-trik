@@ -13,8 +13,8 @@ module_autoload_l3g42xxd_spi="l3g42xxd_spi"
 
 MULTI_CONFIG_BASE_SUFFIX = ""
 
-SRCREV = "${AUTOREV}"
-SRC_URI = "git://github.com/trikset/trik-linux.git;branch=trik-linux-3.6.7 \
+SRCREV = "d5c5758d1749fb74d192318e24384dfa6b863fb2"
+SRC_URI = "git://github.com/trikset/trik-linux.git;branch=trik-linux-3.6.7-ov7670 \
 	   file://defconfig"
 
 S = "${WORKDIR}/git"
