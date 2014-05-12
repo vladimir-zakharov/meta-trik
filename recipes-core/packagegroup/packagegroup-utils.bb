@@ -12,6 +12,7 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS ?= ""
 
 RDEPENDS_${PN} = "\
   iptables \
+  mtd-utils \
   evtest \
   i2c-tools \
   usbutils \
@@ -24,6 +25,7 @@ RDEPENDS_${PN} = "\
   atop \
   cronie \
   tzdata \
+  u-boot-trik-fw-utils \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
