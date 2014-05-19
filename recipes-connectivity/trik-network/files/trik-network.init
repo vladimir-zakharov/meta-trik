@@ -5,6 +5,7 @@ TRIK_NETWORK=/etc/trik/init_wifi.sh
 case $1 in
 	start)
 		/etc/trik/init_wifi.sh
+	;;
 	*)
 		echo "Usage: $0 {start}"
 		exit 1
