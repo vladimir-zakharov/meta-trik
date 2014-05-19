@@ -23,6 +23,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		dsp-modules \
 		softap-udhcpd-config \
 		trik-network \
+		fuse \
 		"
 #packagegroup-core-full-cmdline-sys-services
 #packagegroup-core-full-cmdline-multiuser
