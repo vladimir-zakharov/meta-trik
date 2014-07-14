@@ -7,9 +7,10 @@ LICENSE = "CLOSED"
 
 inherit module
 
-module_autoload_cmemk="cmemk"
+KERNEL_MODULE_AUTOLOAD += "cmemk" 
+KERNEL_MODULE_PROBECONF +="cmemk"
 module_conf_cmemk="options cmemk phys_start=0xc8000000 phys_end=0xca000000 pools=100x4096,20x131072,10x1440000"
-module_autoload_syslink="syslink"
+KERNEL_MODULE_AUTOLOAD += "syslink"
 
 SRC_URI = "http://195.19.241.150/packages/source/${PN}-${PV}.tar.gz"
 SRC_URI[md5sum] = "98853aed68db3bcba948ae3282eb35b1"
