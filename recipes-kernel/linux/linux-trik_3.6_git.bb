@@ -8,8 +8,8 @@ PR = "r1"
 
 inherit kernel
 
-module_autoload_l3g42xxd="l3g42xxd"
-module_autoload_l3g42xxd_spi="l3g42xxd_spi"
+KERNEL_MODULE_AUTOLOAD +="l3g42xxd"
+KERNEL_MODULE_AUTOLOAD +="l3g42xxd_spi"
 
 MULTI_CONFIG_BASE_SUFFIX = ""
 
