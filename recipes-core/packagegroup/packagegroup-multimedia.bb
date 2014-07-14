@@ -17,6 +17,9 @@ RDEPENDS_${PN} = "\
   gst-meta-base \
   gst-meta-audio \
   gst-meta-video \
+  gst-ffmpeg \
+  sox \
+  mjpg-streamer \
  "
 
 RRECOMMENDS_${PN} = "\
