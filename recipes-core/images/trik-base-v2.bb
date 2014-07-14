@@ -8,28 +8,28 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-wifi \
 		packagegroup-qte-trik \
 		packagegroup-core-ssh-openssh \
+		localedef \
 		packagegroup-firmware \
 		packagegroup-utils \
 		packagegroup-multimedia \
+		packagegroup-core-tools-debug \
 		udev-extraconf \
 		mspbsl \
 		mono \
+		fsharp \
 		rc-local \
 		python \
 		python-pip \
 		trik-runtime \
-		roslaunch \
 		ruby \
 		dsp-modules \
 		softap-udhcpd-config \
 		trik-network \
 		fuse \
+		eglibc-utils \
+		locale-base-ru-ru \
 		"
-#packagegroup-core-full-cmdline-sys-services
-#packagegroup-core-full-cmdline-multiuser
-#packagegroup-core-full-cmdline-extended
-#packagegroup-core-full-cmdline-utils
-IMAGE_LINGUAS = " "
+IMAGE_LINGUAS = "en-us ru-ru"
 
 LICENSE = "MIT"
 
