@@ -25,6 +25,8 @@ RDEPENDS_${PN} = "\
   atop \
   cronie \
   tzdata \
+  rsync \
+  fbgrab \
   u-boot-trik-fw-utils \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
