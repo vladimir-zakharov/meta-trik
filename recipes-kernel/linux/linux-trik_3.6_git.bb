@@ -13,8 +13,8 @@ KERNEL_MODULE_AUTOLOAD +="l3g42xxd_spi"
 
 MULTI_CONFIG_BASE_SUFFIX = ""
 
-SRCREV = "d5c5758d1749fb74d192318e24384dfa6b863fb2"
-SRC_URI = "git://github.com/trikset/trik-linux.git;branch=trik-linux-3.6.7-ov7670 \
+SRCREV = "1e168c6db8d2804d30d073d9f20c7f5a2e723062"
+SRC_URI = "git://github.com/trikset/trik-linux.git;branch=trik-linux-3.6.7-release-2014-07-07 \
 	   file://defconfig"
 
 S = "${WORKDIR}/git"
