@@ -28,14 +28,16 @@ IMAGE_INSTALL = "packagegroup-base \
 		fuse \
 		eglibc-utils \
 		locale-base-ru-ru \
-		"
+		locale-default \
+"
+
 IMAGE_LINGUAS = "en-us ru-ru"
 
 LICENSE = "MIT"
 
 inherit core-image
 
-IMAGE_ROOTFS_SIZE = "1048576"
+IMAGE_ROOTFS_SIZE = "1572864"
 
 # remove not needed ipkg informations
 #ROOTFS_POSTPROCESS_COMMAND += "remove_packaging_data_files ; "
