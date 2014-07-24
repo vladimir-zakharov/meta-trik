@@ -28,6 +28,8 @@ RDEPENDS_${PN} = "\
   rsync \
   fbgrab \
   u-boot-trik-fw-utils \
+  wget \
+  psplash \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
