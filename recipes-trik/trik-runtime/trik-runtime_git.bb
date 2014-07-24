@@ -8,15 +8,17 @@ inherit qt4e update-rc.d
 PR = "r4"
 
 S = "${WORKDIR}/git"
-BRANCH = "master"
-SRCREV = "${AUTOREV}"
+TAG = "v3.0.0-a8"
 
-SRC_URI = "git://github.com/trikset/trikRuntime.git;branch=${BRANCH} \
+SRC_URI = "git://github.com/trikset/trikRuntime.git;tag=${TAG} \
 	  file://trikGui.sh"
 
 INITSCRIPT_NAME = "trikGui.sh"
 INITSCRIPT_PARAMS = "start 95 2 3 4 5 . stop 95 0 1 6 ."
-
+do_compile(){
+	export CROSS_COMPILE="${TARGET_PREFIX}"
+	oe_runmake
+}
 do_install() {
 	oe_runmake INSTALL_ROOT=${D}/home/root/trik/ install
 	install -m 0755 ${S}/trikRun/test.qts ${D}/home/root/trik/
