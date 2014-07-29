@@ -2,7 +2,7 @@ DESCRIPTION = "Meta package for building an installable TRIK toolchain"
 LICENSE = "MIT"
 PR = "r0"
 
-LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=3f40d7994397109285ec7b81fdeb3b58"
+LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d690"
 
 TOOLCHAIN_HOST_TASK = "packagegroup-cross-canadian-${MACHINE} \
                        nativesdk-packagegroup-qte-toolchain-host \
