@@ -17,6 +17,7 @@ RDEPENDS_${PN} = " \
         qt4-embedded-plugin-imageformat-tiff \
         qt4-embedded-plugin-mousedriver-tslib \
         qt4-embedded-plugin-sqldriver-sqlite \
+	qt4-embedded-plugin-gfxdriver-gfxtransformed \
 	tslib \
 	tslib-calibrate \
 	tslib-tests \
