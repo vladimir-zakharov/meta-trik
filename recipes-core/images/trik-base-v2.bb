@@ -28,6 +28,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		eglibc-utils \
 		locale-base-ru-ru \
 		locale-default \
+		packagegroup-triksensors \
 "
 
 IMAGE_LINGUAS = "en-us ru-ru"
