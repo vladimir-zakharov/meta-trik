@@ -4,8 +4,8 @@ LICENSE		 = "Apache-2.0"
 LIC_FILES_CHKSUM ="file://${COREBASE}/meta/files/common-licenses/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
 
-#TAG="${PN}_1410030"
-SRC_URI	="git://github.com/dmitry42nd/sensors-ov7670.git;branch=${PN};tag"
+TAG="${PN}_1410060"
+SRC_URI	="git://github.com/dmitry42nd/sensors-ov7670.git;branch=${PN};tag=${TAG}"
 
 S ="${WORKDIR}/git"
 do_compile() {
