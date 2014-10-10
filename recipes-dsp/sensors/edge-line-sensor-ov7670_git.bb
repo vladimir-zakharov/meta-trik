@@ -13,9 +13,9 @@ do_compile() {
 	:
 }
 do_install() {
-	install -d -m 0755 ${D}/etc/trik/${PN}/
-	cp ${S}/dsp_server.xe674 ${D}/etc/trik/${PN}/
-	install -m 0755 ${S}/${PN} ${D}/etc/trik/${PN}/
+	install -d -m 0755 ${D}/etc/trik/sensors/${PN}/
+	cp ${S}/dsp_server.xe674 ${D}/etc/trik/sensors/${PN}/
+	install -m 0755 ${S}/${PN} ${D}/etc/trik/sensors/${PN}/
 	
 	install -d -m 0755 ${D}/etc/init.d/
 	install -m 0755 ${S}/${PN}.sh ${D}/etc/init.d/
