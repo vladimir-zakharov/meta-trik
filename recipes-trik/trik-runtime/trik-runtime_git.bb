@@ -9,7 +9,7 @@ inherit qt4e
 PR = "r4"
 
 S = "${WORKDIR}/git"
-TAG = "v3.0.0-a14"
+TAG = "v3.0.0-b0"
 
 SRC_URI = "git://github.com/trikset/trikRuntime.git;tag=${TAG} \
 	  file://trikGui.sh \
