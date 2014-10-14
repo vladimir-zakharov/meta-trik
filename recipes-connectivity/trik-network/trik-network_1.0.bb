@@ -22,9 +22,9 @@ do_compile() {
 	bbwarn "Empty" 
 }
 do_install() {
-	install -d ${D}${sysconfdir}/init.d
+	install -d -m 755 ${D}${sysconfdir}/init.d
 	install -m 755 ${WORKDIR}/trik-network.init ${D}${sysconfdir}/init.d/trik-network
-	install -d m 0755 ${D}${sysconfdir}/trik/
+	install -d -m 755 ${D}${sysconfdir}/trik/
 	install -m 755 ${S}/set_wifi_mode.sh ${D}${sysconfdir}/trik/
 	install -m 755 ${S}/init_wifi.sh ${D}${sysconfdir}/trik/
 }
