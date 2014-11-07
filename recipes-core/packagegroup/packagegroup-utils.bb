@@ -30,6 +30,7 @@ RDEPENDS_${PN} = "\
   u-boot-trik-fw-utils \
   wget \
   psplash \
+  picocom \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
