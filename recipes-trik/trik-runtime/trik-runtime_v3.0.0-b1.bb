@@ -1,4 +1,4 @@
-TAG = "v3.0.0-b1"
+TAG = "${PV}"
 
 SRC_URI = "git://github.com/trikset/trikRuntime.git;tag=${TAG} \
           file://trikGui.sh \

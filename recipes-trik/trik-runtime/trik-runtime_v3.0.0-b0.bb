@@ -1,4 +1,4 @@
-TAG = "v3.0.0-b0"
+TAG = "${PV}"
 
 SRC_URI = "git://github.com/trikset/trikRuntime.git;tag=${TAG} \
           file://0001-Updated-config-for-videosensors-made-trikGui-reappea.patch \
