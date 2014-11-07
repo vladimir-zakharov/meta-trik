@@ -4,7 +4,7 @@ LICENSE = "GPLv2"
 KERNEL_IMAGETYPE = "uImage"
 KERNEL_VERSION ="3.6.7"
 
-PR = "r1"
+PR = "r2"
 
 inherit kernel
 
@@ -13,8 +13,9 @@ KERNEL_MODULE_AUTOLOAD +="l3g42xxd_spi"
 
 MULTI_CONFIG_BASE_SUFFIX = ""
 
-SRCREV = "1e168c6db8d2804d30d073d9f20c7f5a2e723062"
-SRC_URI = "git://github.com/trikset/trik-linux.git;branch=trik-linux-3.6.7-release-2014-07-07 \
+SRCREV = "${AUTOREV}"
+BRANCH = "trik-linux-3.6.7-release-2014-11-05"
+SRC_URI = "git://github.com/trikset/trik-linux.git;branch=${BRANCH} \
 	   file://defconfig"
 
 S = "${WORKDIR}/git"
