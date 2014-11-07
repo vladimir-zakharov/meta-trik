@@ -15,8 +15,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-core-tools-debug \
 		udev-extraconf \
 		mspbsl \
-		mono \
-		fsharp \
 		rc-local \
 		python \
 		python-pip \
@@ -29,7 +27,10 @@ IMAGE_INSTALL = "packagegroup-base \
 		locale-base-ru-ru \
 		locale-default \
 		packagegroup-triksensors \
+		trik-feed-configs \
 "
+#		mono
+#		fsharp
 
 IMAGE_LINGUAS = "en-us ru-ru"
 
