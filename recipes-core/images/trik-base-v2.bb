@@ -19,6 +19,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		python \
 		python-pip \
 		trik-runtime \
+		trik-models \
 		dsp-modules \
 		softap-udhcpd-config \
 		trik-network \
