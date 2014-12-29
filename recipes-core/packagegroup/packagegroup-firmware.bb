@@ -3,9 +3,10 @@ DESCRIPTION = "Firmware for usb-wifi(ath9k,rt73),wl12xx,bluetooth"
 LICENSE = "LGPL"
 PR = "r1"
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 inherit packagegroup
 
-PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS ?= ""
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS ?= ""

@@ -3,9 +3,10 @@ DESCRIPTION = "The minimal set of packages required to manupulate usb, i2c,input
 LICENSE = "LGPL"
 PR = "r0"
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 inherit packagegroup
 
-PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS ?= ""
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS ?= ""
