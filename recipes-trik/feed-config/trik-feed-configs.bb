@@ -5,11 +5,13 @@ PR = "r0"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 TRIKFEEDSERVER_BASE = "http://downloads.trikset.com/"
-TRIKFEEDSERVER_PREFIX = "feeds/"
+TRIKFEEDSERVER_PREFIX = "update_feeds/"
+
 TRIKFEED_CONFIG="trik-feeds.conf"
 do_compile() {
 	mkdir -p ${S}/${sysconfdir}/opkg/
 	archconf=${S}/${sysconfdir}/opkg/arch.conf
+	version_file=${S}/${sysconfdir}/trikos_version
 	ipkgarchs="all armv5te ${MACHINE_ARCH}"
 	basefeedconf=${S}/${sysconfdir}/opkg/${TRIKFEED_CONFIG}
 	priority=1
@@ -21,14 +23,16 @@ do_compile() {
 
 	rm -f $basefeedconf
         for arch in $ipkgarchs; do
-                echo "src/gz $arch ${TRIKFEEDSERVER_BASE}${TRIKFEEDSERVER_PREFIX}$arch" >> $basefeedconf
+                echo "src/gz $arch ${TRIKFEEDSERVER_BASE}${TRIKFEEDSERVER_PREFIX}${TRIKOS_VERSION}/$arch" >> $basefeedconf
         done
-
+	rm -rf $version_file
+	echo "TRIK OS version ${TRIKOS_VERSION}" >>  $version_file
 }
 do_install(){
 	install -d ${D}${sysconfdir}/opkg
         install -m 0644  ${S}/${sysconfdir}/opkg/${TRIKFEED_CONFIG} ${D}${sysconfdir}/opkg/
+	install -m 0644 ${S}/${sysconfdir}/trikos_version  ${D}${sysconfdir}/
 }
 
-FILES_${PN} = "/etc/opkg/*"
+FILES_${PN} = "/etc/*"
 
