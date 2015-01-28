@@ -8,4 +8,5 @@ inherit packagegroup
 RDEPENDS_${PN} += "\
     nativesdk-make \
     nativesdk-sphinxtrain \
+    nativesdk-python-scons \
     "
