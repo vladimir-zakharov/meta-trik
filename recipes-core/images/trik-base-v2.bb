@@ -7,7 +7,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		${CORE_IMAGE_EXTRA_INSTALL} \
 		packagegroup-wifi \
 		packagegroup-qte-trik \
-		packagegroup-core-ssh-openssh \
+		packagegroup-core-ssh-dropbear \
 		localedef \
 		packagegroup-firmware \
 		packagegroup-utils \
