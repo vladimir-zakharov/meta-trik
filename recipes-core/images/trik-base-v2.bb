@@ -13,11 +13,10 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-utils \
 		packagegroup-multimedia \
 		packagegroup-core-tools-debug \
+		packagegroup-core-tools-profile\
 		udev-extraconf \
 		mspbsl \
-		rc-local \
-		python \
-		python-pip \
+		rc-local\
 		trik-runtime \
 		trik-models \
 		dsp-modules \
@@ -25,11 +24,16 @@ IMAGE_INSTALL = "packagegroup-base \
 		trik-network \
 		fuse \
 		eglibc-utils \
-		locale-base-ru-ru \
-		locale-default \
 		packagegroup-triksensors \
 		trik-feed-configs \
 "
+#		python 
+#		python-pip 
+
+#		locale-base-ru-ru 
+#		locale-default 
+
+
 #		mono
 #		fsharp
 
