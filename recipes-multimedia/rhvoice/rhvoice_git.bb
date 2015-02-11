@@ -4,12 +4,13 @@ LICENSE = "LGPLv3+ & GPLv3+"
 LIC_FILES_CHKSUM="file://COPYING;md5=d32239bcb673463ab874e80d47fae504\
                     file://COPYING.LESSER;md5=e6a600fd5e1d9cbde2d983680233ad02"
 
-inherit scons pkgconfig
-DEPENDS ?= ""
-#DEPENDS = "glibmm" 
+inherit scons pkgconfig 
+#inherit distro_features_check
 
-DEPENDS +=  "libao"
-RDEPENDS_${PN} += "libao"
+REQUIRED_DISTRO_FEATURES="alsa portaudio"
+
+DEPENDS +=  "portaudio-v19"
+RDEPENDS_${PN} += "portaudio-v19"
 
 PULSE_rhvoice = "${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', 'pulseaudio', '', d)}"
 DEPENDS += "${PULSE_rhvoice}"
