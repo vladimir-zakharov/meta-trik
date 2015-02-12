@@ -25,22 +25,13 @@ PV = "0.4+git${SRCPV}"
 S = "${WORKDIR}/git"
 L = "${datadir}/RHVoice"
 
-FILES_${PN} += "${datadir}/RHVoice"
-EXTRA_OESCONS = ""
-
-do_install () {
-        install -p -D -T -m 0644 ${S}/config/RHVoice.conf ${D}${sysconfdir}/RHVoice/RHVoice.conf  
-        for voice in irina aleksandr elena anna alan
-        do
-           install -p -m 0644 -d ${S}/data/voices/${voice} ${D}${L}/voices/${voice}   
-        done
-
-        for lang in English Russian
-        do
-           install -p -m 0644 -d ${S}/data/voices/${lang} ${D}${L}/languages/${lang}   
-        done
-		
-	
-}
-
-
+FILES_${PN} += "${sysconfdir}/RHVoice\
+                ${datadir}/RHVoice/languages/English\
+                ${datadir}/RHVoice/languages/Russian\
+                ${datadir}/RHVoice/voices/aleksandr\
+                ${datadir}/RHVoice/voices/elena\
+                ${datadir}/RHVoice/voices/anna\
+                ${datadir}/RHVoice/voices/irina\
+                ${datadir}/RHVoice/voices/alan\
+"
+EXTRA_OESCONS = "sysconfdir={$D}${sysconfdir}"
