@@ -5,22 +5,26 @@ LIC_FILES_CHKSUM="file://COPYING;md5=d32239bcb673463ab874e80d47fae504\
                     file://COPYING.LESSER;md5=e6a600fd5e1d9cbde2d983680233ad02"
 
 inherit scons pkgconfig 
-#inherit distro_features_check
+inherit distro_features_check
 
-REQUIRED_DISTRO_FEATURES="alsa portaudio"
+REQUIRED_DISTRO_FEATURES="alsa pulseaudio"
 
-DEPENDS +=  "portaudio-v19"
-RDEPENDS_${PN} += "portaudio-v19"
+DEPENDS +=  "pulseaudio"
+RDEPENDS_${PN} += "libpulse-simple"
 
-PULSE_rhvoice = "${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', 'pulseaudio', '', d)}"
-DEPENDS += "${PULSE_rhvoice}"
-RDEPENDS_${PN} += "${PULSE_rhvoice}"
+DEPENDS +=  "glibmm"
+RDEPENDS_${PN} += "glibmm"
+
+
+#PULSE_rhvoice = "${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', 'pulseaudio', '', d)}"
+#DEPENDS += "${PULSE_rhvoice}"
+#RDEPENDS_${PN} += "${PULSE_rhvoice}"
 
 SRC_URI = "git://github.com/iakov/RHVoice.git;branch=TRIKhotfix"
 #SRCREV = "master"
 SRCREV = "TRIKhotfix"
 
-PV = "0.4+git${SRCPV}"
+PV = "0.5+git${SRCPV}"
 
 S = "${WORKDIR}/git"
 L = "${datadir}/RHVoice"
