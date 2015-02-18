@@ -15,6 +15,7 @@ RDEPENDS_${PN} = "\
   linux-firmware-trik-wl1271 \
   linux-firmware-ath9k \
   linux-firmware-ralink \
+  linux-firmware-msp \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
