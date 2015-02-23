@@ -13,6 +13,7 @@ RDEPENDS_${PN} = "\
   sphinxtrain \
   espeak \
   flite-alsa \
+  rhvoice\
   v4l-utils \
   gst-meta-base \
   gst-meta-audio \
