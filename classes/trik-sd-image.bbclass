@@ -10,6 +10,11 @@ IMAGE_TYPES += "ext4 ext4.xz sdimg sdimg.xz"
 IMAGE_TYPEDEP_sdimg = "ext4"
 IMAGE_TYPEDEP_sdimg.xz = "sdimg"
 
+IMAGE_DEPENDS_sdimg = 	"\
+			parted-native \
+			e2fsprogs-native \
+			"
+
 IMAGE_FSTYPES_append = "sdimg.xz sdimg"
 
 #IMAGE_TYPES_MASKED = "sdimg"
