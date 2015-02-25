@@ -1,5 +1,5 @@
-PR="r5"
-DESCRIPTION = "Trik-base v2"
+PR="r6"
+DESCRIPTION = "TRIK core base v2"
 IMAGE_FEATURES += "package-management"
 IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-core-boot \
@@ -26,6 +26,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		eglibc-utils \
 		packagegroup-triksensors \
 		trik-feed-configs \
+                roslaunch \
 "
 #		python 
 #		python-pip 
