@@ -27,7 +27,6 @@ SRCREV = "TRIKhotfix"
 PV = "0.5+git${SRCPV}"
 
 S = "${WORKDIR}/git"
-L = "${datadir}/RHVoice"
 
 FILES_${PN} += "${sysconfdir}/RHVoice\
                 ${datadir}/RHVoice/languages/English\
@@ -37,5 +36,6 @@ FILES_${PN} += "${sysconfdir}/RHVoice\
                 ${datadir}/RHVoice/voices/anna\
                 ${datadir}/RHVoice/voices/irina\
                 ${datadir}/RHVoice/voices/alan\
+                ${datadir}/dbus-1/services/com.github.OlgaYakovleva.RHVoice.service\
 "
 EXTRA_OESCONS = "sysconfdir={$D}${sysconfdir}"
