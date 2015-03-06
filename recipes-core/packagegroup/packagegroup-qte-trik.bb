@@ -1,5 +1,5 @@
-SUMMARY = "Qt for Embedded Trik Linux (Qt without X11)"
-PR = "r3"
+SUMMARY = "Qt for Embedded TRIK Linux (Qt without X11)"
+PR = "r4"
 LICENSE = "MIT"
 
 inherit packagegroup
@@ -21,5 +21,5 @@ RDEPENDS_${PN} = " \
 	tslib \
 	tslib-calibrate \
 	tslib-tests \
-	qt4-embedded-demos \
 "
+
