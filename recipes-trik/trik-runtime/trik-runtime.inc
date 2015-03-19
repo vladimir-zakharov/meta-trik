@@ -22,7 +22,8 @@ do_install() {
         install -m 0755 ${S}/media/* ${D}/home/root/trik/media/
         install -m 0755 ${S}/trikScriptRunner/system.js ${D}/home/root/trik/
 
-        install -m 0755 ${S}/trikControl/config.xml ${D}/home/root/trik/
+        install -m 0755 ${S}/trikControl/system-config.xml ${D}/home/root/trik/
+        install -m 0755 ${S}/trikControl/model-config.xml ${D}/home/root/trik/
         install -m 0755 ${S}/trikGui/wpa-config.xml ${D}/home/root/trik/
         install -d ${D}/${sysconfdir}/trik/
         install -m 0755 ${WORKDIR}/trikGui.sh ${D}/${sysconfdir}/trik/
@@ -38,7 +39,7 @@ FILES_${PN}-dev += "/home/root/trik/*.so"
 FILES_${PN}-dbg += "/home/root/trik/.debug"
 
 pkg_postinst_${PN} () {
-        killall trikGui
+        killall trikGui || true
         sleep 3
         killall -9 trikGui 2> /dev/null || true
 }
