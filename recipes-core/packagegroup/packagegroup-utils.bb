@@ -32,6 +32,8 @@ RDEPENDS_${PN} = "\
   wget \
   psplash \
   picocom \
+  usb-modeswitch \
+  usb-modeswitch-data \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
