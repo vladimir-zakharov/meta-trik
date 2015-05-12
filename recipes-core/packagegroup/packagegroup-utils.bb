@@ -34,6 +34,7 @@ RDEPENDS_${PN} = "\
   picocom \
   usb-modeswitch \
   usb-modeswitch-data \
+  rp-pppoe \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
