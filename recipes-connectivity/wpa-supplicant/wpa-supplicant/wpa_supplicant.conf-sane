@@ -20,3 +20,9 @@ network={
 	priority=8
 }
 
+network={                                                                   
+        ssid="TRIKstar"
+        psk=ae43377e1ea428ea91034a44aa7b3debd83efac44a5b280328aa9eb4c2adba2a
+        priority=8
+}
+
