@@ -28,40 +28,41 @@ inherit image-prelink
 TRIKIMG_ROOTFS =  "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ext4"
 
 TRIKIMG_FILE ?= "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.sdimg"
+TRIKIMG_INTRO ?= "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.intro.sdimg"
 
-#reserve space for FAT partition
-# NOT SUPPORTED YET!!!
-# NOW IT IS CREATED WITH SIZE OF IMAGE_ROOTFS_ALIGNMENT KiBs 
-TRIKIMG_FAT_SIZE ?= "${IMAGE_ROOTFS_ALIGNMENT}"
+
+#reserve space for FAT partition (KiB)
+TRIKIMG_FAT_SIZE ?= "10000"  #"${IMAGE_ROOTFS_ALIGNMENT}"
 
 IMAGE_CMD_sdimg () { 
         create_trik_sd_image
 }
 
-create_trik_sd_image (){
-	ROOTFS_SIZE=`du --dereference --apparent-size --block-size=1K --summarize ${TRIKIMG_ROOTFS} | cut -f 1`
+fakeroot create_trik_sd_image (){
+	
+	# reserve space for FAT partition
+	truncate "-s ${TRIKIMG_FAT_SIZE}K" ${TRIKIMG_INTRO}  
+
+	#round upto alignment
+	truncate "-s %${IMAGE_ROOTFS_ALIGNMENT}K" ${TRIKIMG_INTRO}  
+
+	TRIKIMG_INTRO_SIZE=`du --dereference --apparent-size --block-size=1K --summarize ${TRIKIMG_INTRO} | cut -f 1`
 
         # reserve room for rootfs  	
-	truncate "-s >${ROOTFS_SIZE}K" ${TRIKIMG_FILE}  
-	
-	#round upto alignment
-	truncate "-s %${IMAGE_ROOTFS_ALIGNMENT}K" ${TRIKIMG_FILE}  
-
-	# reserve space for FAT partition
-	truncate "-s +${TRIKIMG_FAT_SIZE}K" ${TRIKIMG_FILE}  
-
+	#truncate "-s +${ROOTFS_SIZE}K" ${TRIKIMG_FILE}  
+		
         #round to alignment again
-	truncate "-s %${IMAGE_ROOTFS_ALIGNMENT}K" ${TRIKIMG_FILE}  
+	#truncate "-s %${IMAGE_ROOTFS_ALIGNMENT}K" ${TRIKIMG_FILE}  
 
-	parted -s ${TRIKIMG_FILE} -- \
+	parted -s ${TRIKIMG_INTRO} -- \
            unit KiB \
            mklabel msdos \
-           mkpart primary ext4 ${IMAGE_ROOTFS_ALIGNMENT} -1s \
+           mkpart primary ext4 ${TRIKIMG_INTRO_SIZE} -1s \
            set 1 hidden on \
-           mkpart primary fat32 1 ${IMAGE_ROOTFS_ALIGNMENT} \
+           mkpart primary fat32 1 ${TRIKIMG_INTRO_SIZE} \
            print
 	
-        dd if=${TRIKIMG_ROOTFS} of=${TRIKIMG_FILE} conv=fsync bs=${IMAGE_ROOTFS_ALIGNMENT}K seek=1 
+        cat ${TRIKIMG_INTRO} ${TRIKIMG_ROOTFS} > ${TRIKIMG_FILE} 
 }
 
 
