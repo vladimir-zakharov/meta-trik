@@ -20,7 +20,7 @@ interface=wlan0
 
 generate_ap_ssid() {
 	sed --in-place '/^trik_wifi_ap_ssid=/d' $trikrc
-	trik_wifi_ap_ssid="trik-`cat /sys/class/net/$interface/address | tail -c 9`"
+	trik_wifi_ap_ssid="$(cat /etc/hostname)"
 	echo "trik_wifi_ap_ssid=$trik_wifi_ap_ssid" >>$trikrc
 }
 

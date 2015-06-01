@@ -35,6 +35,9 @@ RDEPENDS_${PN} = "\
   usb-modeswitch \
   usb-modeswitch-data \
   rp-pppoe \
+  samba \
+  winbind \
+  bash-completion \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 

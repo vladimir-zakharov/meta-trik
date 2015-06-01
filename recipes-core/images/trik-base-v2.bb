@@ -5,6 +5,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-core-boot \
 		${ROOTFS_PKGMANAGE_BOOTSTRAP} \
 		${CORE_IMAGE_EXTRA_INSTALL} \
+		trik-hostname \
 		packagegroup-wifi \
 		packagegroup-qte-trik \
 		packagegroup-core-ssh-dropbear \
