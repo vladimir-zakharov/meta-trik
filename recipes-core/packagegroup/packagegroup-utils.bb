@@ -38,6 +38,7 @@ RDEPENDS_${PN} = "\
   samba \
   winbind \
   bash-completion \
+  openvpn \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
