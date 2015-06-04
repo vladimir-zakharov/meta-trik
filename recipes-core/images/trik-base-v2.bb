@@ -26,7 +26,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		fuse \
 		eglibc-utils \
 		packagegroup-triksensors \
-		trik-feed-configs \
+		distro-feed-configs \
                 roslaunch \
 "
 #		python 
