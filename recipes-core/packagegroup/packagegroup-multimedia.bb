@@ -1,7 +1,7 @@
 SUMMARY = "Multimedia libraries package"
 DESCRIPTION = "Multimedia libraries and utilities"
 LICENSE = "LGPL"
-PR = "r2"
+PR = "r3"
 
 inherit packagegroup
 
@@ -19,6 +19,9 @@ RDEPENDS_${PN} = "\
   sox \
   flac \
   mjpg-streamer \
+  pocketsphinx \
+  pocketsphinx-tools \
+  sphinxtrain \
  "
 
 RRECOMMENDS_${PN} = "\
