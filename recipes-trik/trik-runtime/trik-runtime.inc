@@ -3,8 +3,9 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=175792518e4ac015ab6696d16c4f607e"
 RDEPENDS_${PN} = "locale-default espeak alsa-utils"
 RRECOMMENDS_${PN} = "vlc" 
+SECTION = "x11/apps"
 
-inherit qt4e
+inherit qt4x11
 
 PR = "r4"
 
