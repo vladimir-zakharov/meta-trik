@@ -18,6 +18,7 @@ RDEPENDS_${PN} = "\
   wireless-tools \
   hostap-daemon \
   ifplugd \
+  lighttpd \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
