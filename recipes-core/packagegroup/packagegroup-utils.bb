@@ -29,7 +29,7 @@ RDEPENDS_${PN} = "\
   rsync \
   fbgrab \
   u-boot-trik-fw-utils \
-  wget \
+  curl \
   psplash \
   picocom \
   usb-modeswitch \
