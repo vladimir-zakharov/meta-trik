@@ -23,7 +23,6 @@ RDEPENDS_${PN} = "\
   ntp \
   strace \
   ltrace \
-  atop \
   cronie \
   tzdata \
   rsync \
@@ -39,6 +38,9 @@ RDEPENDS_${PN} = "\
   winbind \
   bash-completion \
   openvpn \
+  can-utils \
+  canutils \
+  iproute2 \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
