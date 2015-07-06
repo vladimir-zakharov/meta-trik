@@ -39,7 +39,6 @@ RDEPENDS_${PN} = "\
   bash-completion \
   openvpn \
   can-utils \
-  canutils \
   iproute2 \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "

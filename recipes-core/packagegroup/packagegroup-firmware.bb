@@ -16,6 +16,8 @@ RDEPENDS_${PN} = "\
   linux-firmware-ath9k \
   linux-firmware-ralink \
   linux-firmware-msp \
+  kernel-module-systec-can \
+  linux-firmware-systec-can \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
