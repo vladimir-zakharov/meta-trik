@@ -14,7 +14,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-utils \
 		packagegroup-multimedia \
 		packagegroup-core-tools-debug \
-		packagegroup-core-tools-profile\
 		udev-extraconf \
 		mspbsl \
 		rc-local\
