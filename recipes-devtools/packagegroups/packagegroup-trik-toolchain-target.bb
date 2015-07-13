@@ -12,6 +12,7 @@ RDEPENDS_${PN} += "\
     sphinxbase-dev \
     pocketsphinx-dev \
     libnl-dev \
+    v4l-utils-dev \
     libv4l-dev \
     boost-dev \
     hidapi-dev \
