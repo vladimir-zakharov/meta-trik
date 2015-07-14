@@ -1,3 +1,4 @@
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 RRECOMMENDS_winbind += "libnss-winbind"
 
 pkg_postinst_libnss-winbind () {
