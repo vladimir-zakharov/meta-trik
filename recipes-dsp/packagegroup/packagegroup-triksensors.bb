@@ -19,6 +19,7 @@ RDEPENDS_${PN} = "\
 	object-sensor-ov7670 \
 	object-sensor-webcam \
 	mjpg-encoder-ov7670 \
+	motion-sensor-ov7670 \
 	${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
 	"
 RRECOMMENDS_${PN} = "\
