@@ -15,7 +15,7 @@ if [ ! -f /etc/trik/custom/hostname ]; then
 fi
 
 if [ ! -L /etc/hostname ]; then
-        ln -s /etc/trik/custom/hostname /etc/hostname
+        ln -s -f /etc/trik/custom/hostname /etc/hostname
 fi
 
 
