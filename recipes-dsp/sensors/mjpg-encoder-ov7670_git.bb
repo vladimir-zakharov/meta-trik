@@ -6,7 +6,7 @@ RDEPENDS_${PN}   = "common-ov7670"
 
 PR="r1"
 
-TAG="${PN}_150814"
+TAG="${PN}_150817"
 SRC_URI	="git://github.com/dmitry42nd/sensors-ov7670.git;branch=${PN};tag=${TAG}"
 
 S ="${WORKDIR}/git"
