@@ -18,12 +18,6 @@ hostapd_conf=/etc/hostapd.conf
 trikrc=/etc/trik/trikrc
 interface=wlan0
 
-generate_ap_ssid() {
-	sed --in-place '/^trik_wifi_ap_ssid=/d' $trikrc
-	trik_wifi_ap_ssid="$(cat /etc/hostname)"
-	echo "trik_wifi_ap_ssid=$trik_wifi_ap_ssid" >>$trikrc
-}
-
 generate_ap_passphrase() {
 	sed --in-place '/^trik_wifi_ap_passphrase=/d' $trikrc
 	trik_wifi_ap_passphrase=""
@@ -39,7 +33,7 @@ generate_ap_passphrase() {
 generate_hostapd_conf() {
 		echo "interface=$interface
 driver=nl80211
-ssid=$trik_wifi_ap_ssid
+ssid=$(cat /etc/hostname)
 hw_mode=g
 channel=1
 macaddr_acl=0
@@ -76,11 +70,6 @@ case "$1" in
 	
 	"ap")
 		source $trikrc
-
-		if [ x$trik_wifi_ap_ssid = x ]
-			then
-				generate_ap_ssid
-		fi
 
 		if [ x$trik_wifi_ap_passphrase = x ]
 			then
