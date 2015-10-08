@@ -18,7 +18,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		mspbsl \
 		rc-local\
 		trik-runtime \
-		trik-models \
+		trik-examples \
 		dsp-modules \
 		softap-udhcpd-config \
 		trik-network \
@@ -26,17 +26,8 @@ IMAGE_INSTALL = "packagegroup-base \
 		eglibc-utils \
 		packagegroup-triksensors \
 		distro-feed-configs \
-                roslaunch \
+		roslaunch \
 "
-#		python 
-#		python-pip 
-
-#		locale-base-ru-ru 
-#		locale-default 
-
-
-#		mono
-#		fsharp
 
 IMAGE_LINGUAS = "en-us ru-ru"
 
