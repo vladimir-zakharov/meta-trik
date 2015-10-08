@@ -6,8 +6,6 @@ RRECOMMENDS_${PN} = "vlc"
 
 inherit qt4e
 
-PR = "r4"
-
 S = "${WORKDIR}/git"
 
 do_compile(){
