@@ -21,10 +21,10 @@ do_install_append() {
     echo $'url.rewrite-once = (' >> ${D}${sysconfdir}/lighttpd.conf 
     echo $'  "^(/wpa/.*)" => "$1.sh"' >> ${D}${sysconfdir}/lighttpd.conf      
     echo $')' >> ${D}${sysconfdir}/lighttpd.conf  
-    mkdir ${D}/www/pages/wpa
-    mkdir ${D}/www/pages/images
-    mkdir ${D}/www/pages/styles
-    mkdir ${D}/www/pages/js
+    install -d ${D}/www/pages/wpa
+    install -d ${D}/www/pages/images
+    install -d ${D}/www/pages/styles
+    install -d ${D}/www/pages/js
     install -m 0755 ${WORKDIR}/wpa-configurator.sh ${D}/www/pages/wpa/
     install -m 0755 ${WORKDIR}/wpa-writer.sh ${D}/www/pages/wpa/
     install -m 0755 ${WORKDIR}/wlan-scanner.sh ${D}/www/pages/wpa/
@@ -33,5 +33,5 @@ do_install_append() {
     install -m 0644 ${WORKDIR}/wpa-configurator.js ${D}/www/pages/js/
 }
 
-# dirt hack for rewriting lighttpd.conf
+# TODO: dirty hack for rewriting lighttpd.conf
 CONFFILES_${PN} = ""
