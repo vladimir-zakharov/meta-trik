@@ -27,6 +27,7 @@ RDEPENDS_${PN} = "\
   tzdata \
   rsync \
   fbgrab \
+  fbshot \
   u-boot-trik-fw-utils \
   curl \
   psplash \
@@ -40,6 +41,11 @@ RDEPENDS_${PN} = "\
   openvpn \
   can-utils \
   iproute2 \
+  iftop \
+  iotop \
+  dstat \
+  smem \
+  fbgrab \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
