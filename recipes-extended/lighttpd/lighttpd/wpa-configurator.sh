@@ -8,7 +8,9 @@ Content-Type: text/html
 <title>wpa configurator</title>  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link rel="stylesheet" type="text/css" href="/styles/wpa_base.css">
+
+<link rel="stylesheet" type="text/css" href="/styles/network-base.css">
+<link rel="stylesheet" type="text/css" href="/styles/wpa-base.css">
 
 </head>  
 <body>

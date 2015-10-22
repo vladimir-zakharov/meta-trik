@@ -12,11 +12,6 @@ body {
     vertical-align: middle;
 }
 
-.btn {
-    color: #fff;
-    background-color: #2175bc; 
-}
-
 .success, .error {
     display: none;
     border: 1px solid;
@@ -35,5 +30,3 @@ body {
     color: #D8000C;
     background-color: #FFBABA;
 }
-
-

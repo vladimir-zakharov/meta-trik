@@ -11,12 +11,13 @@ SRC_URI_append = "file://wpa-configurator.sh \
         file://wpa-writer.sh \
         file://wlan-scanner.sh \
         file://lock.png \
-        file://wpa_base.css \
+        file://wpa-base.css \
         file://wpa-configurator.js \
         file://hostname-configurator.sh \
-        file://hostname-configurator.css \
+        file://hostname-base.css \
         file://hostname-configurator.js \
         file://hostname-writer.sh \
+        file://network-base.css \
 "
 do_install_append() {
     echo $'server.modules += ( "mod_cgi" )' >> ${D}${sysconfdir}/lighttpd.conf
@@ -33,13 +34,13 @@ do_install_append() {
     install -m 0755 ${WORKDIR}/wpa-writer.sh ${D}/www/pages/network/
     install -m 0755 ${WORKDIR}/wlan-scanner.sh ${D}/www/pages/network/
     install -m 0644 ${WORKDIR}/lock.png ${D}/www/pages/images/
-    install -m 0644 ${WORKDIR}/wpa_base.css ${D}/www/pages/styles/
+    install -m 0644 ${WORKDIR}/wpa-base.css ${D}/www/pages/styles/
     install -m 0644 ${WORKDIR}/wpa-configurator.js ${D}/www/pages/js/
     install -m 0755 ${WORKDIR}/hostname-configurator.sh ${D}/www/pages/network/
     install -m 0755 ${WORKDIR}/hostname-writer.sh ${D}/www/pages/network/
-    install -m 0644 ${WORKDIR}/hostname-configurator.css ${D}/www/pages/styles/
+    install -m 0644 ${WORKDIR}/hostname-base.css ${D}/www/pages/styles/
     install -m 0644 ${WORKDIR}/hostname-configurator.js ${D}/www/pages/js/
-    
+    install -m 0644 ${WORKDIR}/network-base.css ${D}/www/pages/styles/
 }
 
 # TODO: dirty hack for rewriting lighttpd.conf
