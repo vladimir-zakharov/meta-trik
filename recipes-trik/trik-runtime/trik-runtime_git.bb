@@ -9,8 +9,8 @@ inherit qt4e user-partion
 BRANCH  = "master"
 SRCREV	= "${AUTOREV}"
 SRC_URI = "git://github.com/trikset/trikRuntime.git;branch=${BRANCH} \
-	  file://trikGui.sh \
-	  file://qws_display.sh"
+	  file://qws_display.sh \
+	  file://trikGui.runner"
 
 S = "${WORKDIR}/git"
 
@@ -21,12 +21,19 @@ do_compile(){
 
 do_install() {
         oe_runmake INSTALL_ROOT=${D}/ install
-	mkdir -p ${D}/${TRIK_USER_PARTION_CREATION_DIR}/scripts ${D}/home/root/
-
+	install -d ${D}/${TRIK_USER_PARTION_CREATION_DIR}/scripts ${D}/home/root/
 	ln -s ${TRIK_USER_PARTION_CREATION_DIR}/scripts ${D}/home/root/scripts
+
+        install -d ${D}/${sysconfdir}/profile.d/
+        install -m 0755 ${WORKDIR}/qws_display.sh ${D}/${sysconfdir}/profile.d/
+
+	install -d ${D}/${sysconfdir}/trik/
+	install -m 0755 ${WORKDIR}/trikGui.runner ${D}/${sysconfdir}/trikGui.sh
+
 }
-FILES_${PN} += "/usr/share/"
-FILES_${PN} += "/home/root/"
+FILES_${PN} += "/usr/share/ \
+		/home/root/ \
+		${sysconfdir}"
 
 pkg_postinst_${PN} () {
         killall trikGui || true
