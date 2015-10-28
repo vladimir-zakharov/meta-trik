@@ -19,6 +19,7 @@ RDEPENDS_${PN} = "\
   hostap-daemon \
   ifplugd \
   lighttpd \
+  tcpdump \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 
