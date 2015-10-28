@@ -28,7 +28,7 @@ do_install() {
         install -m 0755 ${WORKDIR}/qws_display.sh ${D}/${sysconfdir}/profile.d/
 
 	install -d ${D}/${sysconfdir}/trik/
-	install -m 0755 ${WORKDIR}/trikGui.runner ${D}/${sysconfdir}/trikGui.sh
+	install -m 0755 ${WORKDIR}/trikGui.runner ${D}/${sysconfdir}/trik/trikGui.sh
 
 }
 FILES_${PN} += "/usr/share/ \
