@@ -24,6 +24,6 @@ do_install_append () {
 }
 generate_fstab() {
 	echo "# additional entries for trik user partion"
-	echo "/dev/mmcblk0p2 ${TRIK_USER_PARTION_CREATION_DIR} vfat defaults,sync,noauto  0  0"
+	echo "/dev/mmcblk0p2 ${TRIK_USER_PARTION_CREATION_DIR} vfat defaults,sync,noauto,uid=65534,gid=65534  0  0"
 } 
 FILES_${PN} += "${sysconfdir}/init.d/"
