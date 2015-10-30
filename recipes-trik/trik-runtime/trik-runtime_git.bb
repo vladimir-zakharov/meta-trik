@@ -33,7 +33,8 @@ do_install() {
 }
 FILES_${PN} += "${TRIK_USER_PARTION_CREATION_DIR}/scripts \
 		/home/root/ \
-		${sysconfdir}"
+		${sysconfdir} \
+		/usr/share/"
 
 pkg_postinst_${PN} () {
         killall trikGui || true
