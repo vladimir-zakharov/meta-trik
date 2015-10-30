@@ -28,6 +28,7 @@ if [ "$REQUEST_METHOD" = "POST" ]; then
             networkStr=$(printf "$networkStr\n\tpriority=%d\n}" $ENCRYPTED_PRIORITY)
             $(echo -e "$networkStr" >> /etc/wpa_supplicant.conf)
             if [ "$?" = "0" ]; then
+                sync
                 echo "OK"
             else
                 echo $'HTTP/1.1 500 Internal Server Error\r\n'
@@ -37,6 +38,7 @@ if [ "$REQUEST_METHOD" = "POST" ]; then
         networkStr=$(printf "network={\n\tssid=\"%s\"\n\tkey_mgmt=NONE\n\tpriority=%d\n}" $essid $NOT_ENCRYPTED_PRIPROTY)
         $(echo -e "$networkStr" >> /etc/wpa_supplicant.conf)
         if [ "$?" = "0" ]; then
+            sync
             echo "OK"
         else
             echo $'HTTP/1.1 500 Internal Server Error\r\n'
