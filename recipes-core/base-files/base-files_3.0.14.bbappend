@@ -7,7 +7,7 @@ COMPATIBLE_MACHINE = "trikboard"
 inherit user-partion update-rc.d
 
 INITSCRIPT_NAME = "trik-hostname.sh"
-INITSCRIPT_PARAMS="start 02 2 3 4 5 ."
+INITSCRIPT_PARAMS="start 38 S ."
 
 SRC_URI += "file://trik-hostname.init"
 
