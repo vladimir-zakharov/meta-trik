@@ -26,6 +26,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-triksensors \
 		distro-feed-configs \
 		roslaunch \
+		formfactor \
 "
 
 IMAGE_LINGUAS = "en-us ru-ru"
