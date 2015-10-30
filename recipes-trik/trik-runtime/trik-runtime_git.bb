@@ -31,7 +31,7 @@ do_install() {
 	install -m 0755 ${WORKDIR}/trikGui.runner ${D}/${sysconfdir}/trik/trikGui.sh
 
 }
-FILES_${PN} += "/usr/share/ \
+FILES_${PN} += "${TRIK_USER_PARTION_CREATION_DIR}/scripts \
 		/home/root/ \
 		${sysconfdir}"
 
