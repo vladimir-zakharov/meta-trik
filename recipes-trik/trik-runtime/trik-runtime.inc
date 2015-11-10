@@ -14,15 +14,10 @@ do_compile(){
 }
 
 do_install() {
-        oe_runmake INSTALL_ROOT=${D}/home/root/trik/ install
-        install -m 0755 ${S}/trikRun/test.qts ${D}/home/root/trik/
-        install -d -m 0755 ${D}/home/root/trik/media/
-        install -m 0755 ${S}/media/* ${D}/home/root/trik/media/
-        install -m 0755 ${S}/trikScriptRunner/system.js ${D}/home/root/trik/
+#        oe_runmake INSTALL_ROOT=${D}/home/root/trik/ install
+	install -d -m 0755 ${D}/home/root/trik/
+	cp -rf  ${S}/bin/arm-release/* ${D}/home/root/trik/
 
-        install -m 0755 ${S}/trikControl/system-config.xml ${D}/home/root/trik/
-        install -m 0755 ${S}/trikControl/model-config.xml ${D}/home/root/trik/
-        install -m 0755 ${S}/trikGui/wpa-config.xml ${D}/home/root/trik/
         install -d ${D}/${sysconfdir}/trik/
         install -m 0755 ${WORKDIR}/trikGui.sh ${D}/${sysconfdir}/trik/
 
