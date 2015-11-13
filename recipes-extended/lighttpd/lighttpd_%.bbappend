@@ -31,6 +31,11 @@ do_install_append() {
     install -m 0644 ${WORKDIR}/lock.png ${D}/www/pages/images/
     install -m 0644 ${WORKDIR}/wpa_base.css ${D}/www/pages/styles/
     install -m 0644 ${WORKDIR}/wpa-configurator.js ${D}/www/pages/js/
+    install -m 0644 ${WORKDIR}/wifi-configurator.html ${D}/www/pages/
+    install -m 0644 ${WORKDIR}/admin.html ${D}/www/pages/
+    install -m 0644 ${WORKDIR}/wifi-configurator.css ${D}/www/pages/styles/
+    install -m 0644 ${WORKDIR}/admin.css ${D}/www/pages/styles/
+    install -m 0644 ${WORKDIR}/handler.js ${D}/www/pages/js/
 }
 
 # TODO: dirty hack for rewriting lighttpd.conf

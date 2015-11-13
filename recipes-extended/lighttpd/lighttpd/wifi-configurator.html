@@ -1,0 +1,28 @@
+<html>  
+<head>  
+    <title>Wi-Fi configurator</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" type="text/css" href="/styles/wifi-configurator.css">
+</head>  
+
+<body>
+    <h1>Настройки Wi-Fi</h1>
+    <div id="success_msg" class="success">Данные успешно занесены!</div>
+    <div id="error_msg" class="error"></div>
+
+    <form id="submit-form" action="javascript:void(0);">
+        <label for="essid">Имя сети (SSID):</label>
+        <input type="text" id="essid" name="essid"/>
+        
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password"/>
+
+        <input class="main-button" type="submit" onclick="handle()" value="Подтвердить">
+    </form> 
+
+    <script src="/js/handler.js"></script>
+
+</body>  
+</html>  
