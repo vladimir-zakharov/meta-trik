@@ -25,7 +25,11 @@ function handle() {
     errorMessage.style.display = 'none';
     var essid = document.getElementById("essid").value;
     var password = document.getElementById("password").value;
-    sendNetworkData("essid=" + essid + "&password=" + password);    
+    var paramString = "essid=" + essid;
+    if (password) {
+        paramString += "&password=" + password;
+    }
+    sendNetworkData(paramString);    
 }
 
 var successMessage = document.getElementById('success_msg');
