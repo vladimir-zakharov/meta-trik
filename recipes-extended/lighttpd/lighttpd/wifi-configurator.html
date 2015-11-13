@@ -8,18 +8,17 @@
 </head>  
 
 <body>
-    <h1>Настройки Wi-Fi</h1>
-    <div id="success_msg" class="success">Данные успешно занесены!</div>
+    <h1>Wi-Fi Settings</h1>
+    <div id="success_msg" class="success">Success!</div>
     <div id="error_msg" class="error"></div>
-
     <form id="submit-form" action="javascript:void(0);">
-        <label for="essid">Имя сети (SSID):</label>
+        <label for="essid">Wi-Fi name (SSID):</label>
         <input type="text" id="essid" name="essid"/>
         
-        <label for="password">Пароль:</label>
+        <label for="password">Password (Keep empty if no password):</label>
         <input type="password" id="password" name="password"/>
 
-        <input class="main-button" type="submit" onclick="handle()" value="Подтвердить">
+        <input class="main-button" type="submit" onclick="handle()" value="Submit">
     </form> 
 
     <script src="/js/handler.js"></script>
