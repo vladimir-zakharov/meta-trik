@@ -24,6 +24,11 @@ function handle() {
     successMessage.style.display = 'none';
     errorMessage.style.display = 'none';
     var essid = document.getElementById("essid").value;
+    if (!essid) {
+        errorMessage.innerHTML = 'Please enter wi-fi name';
+        errorMessage.style.display = 'block';
+        return;
+    }
     var password = document.getElementById("password").value;
     var paramString = "essid=" + essid;
     if (password) {
