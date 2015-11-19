@@ -13,6 +13,11 @@ SRC_URI_append = "file://wpa-configurator.sh \
         file://lock.png \
         file://wpa_base.css \
         file://wpa-configurator.js \
+        file://wifi-configurator.html \
+        file://wifi-configurator.css \
+        file://admin.html \
+        file://admin.css \
+        file://handler.js \
 "
 do_install_append() {
     echo $'server.modules += ( "mod_cgi" )' >> ${D}${sysconfdir}/lighttpd.conf
